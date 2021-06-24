@@ -25,24 +25,18 @@ dependencies:
     sdk: flutter
   sleek_circular_slider:
   syncfusion_flutter_sliders:
-  flutter_holo_date_picker: ^0.3.4+1
+  flutter_holo_date_picker:
   video_player:
   chewie:
-  path_provider:
-  flutter_file_dialog:
-  image_gallery_saver:
-  webview_flutter:
-  http:
-  flutter_html:
-  camera_camera:
+  camera_camera: ^1.0.34+1
   camera:
-  google_sign_in:
-  dio:
-  encrypt:
+  flutter_file_dialog:
+  flutter_html:
   aes_crypt:
-  downloads_path_provider:
-  permission_handler:
+  web_socket_channel:
+  socket_io_client:
   bubble:
+  flutter_document_picker:
 
 
 
