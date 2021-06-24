@@ -4,19 +4,6 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:lab/main.dart';
 
-// class Lab08 extends StatefulWidget {
-//   const Lab08({Key key}) : super(key: key);
-
-//   @override
-//   _Lab08State createState() => _Lab08State();
-// }
-
-// class _Lab08State extends State<Lab08> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return JWTPage();
-//   }
-// }
 
 class Lab08 extends StatefulWidget {
   @override
