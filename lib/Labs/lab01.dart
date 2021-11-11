@@ -143,14 +143,13 @@ class Lab01State extends State<Lab01> {
                 ),
               ),
 
-              // Padding(
-              //   padding: EdgeInsets.only(bottom: 30),
-              //   child: ElevatedButton(
-              //     onPressed: () {
-              //     },
-              //     child: Text('Отправить'),
-              //   ),
-              //  ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 30),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Отправить'),
+                ),
+              ),
 
               Padding(
                   padding: EdgeInsets.only(bottom: 5),

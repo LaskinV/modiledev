@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:camera_camera/camera_camera.dart';
 import 'dart:io';
 import 'package:flutter_file_dialog/flutter_file_dialog.dart';
+import 'package:lab/main.dart';
 
 // class MyStatefulWidget extends StatefulWidget {
 //   const MyStatefulWidget({Key key}) : super(key: key);
@@ -79,7 +80,7 @@ class Lab02State extends State<Lab02> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = [
     // MyStatefulWidget(),
-    VideoPlayer(),
+    // VideoPlayer(),
     CameraScreen(),
   ];
 
@@ -115,22 +116,22 @@ class Lab02State extends State<Lab02> {
   }
 }
 
-class VideoPlayer extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: VideoItems(
-        videoPlayerController: VideoPlayerController.network(
-          'http://techslides.com/demos/samples/sample.mp4',
-        ),
-        looping: true,
-        autoplay: true,
-        autoInitialize: false,
-        allowFullScreen: false,
-      ),
-    );
-  }
-}
+// class VideoPlayer extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       child: VideoItems(
+//         // videoPlayerController: VideoPlayerController.network(
+//         //   'http://techslides.com/demos/samples/sample.mp4',
+//         // ),
+//         looping: true,
+//         autoplay: true,
+//         autoInitialize: false,
+//         allowFullScreen: false,
+//       ),
+//     );
+//   }
+// }
 
 class VideoItems extends StatefulWidget {
   final VideoPlayerController videoPlayerController;
@@ -160,7 +161,7 @@ class _VideoItemsState extends State<VideoItems> {
     super.initState();
     _chewieController = ChewieController(
       videoPlayerController: widget.videoPlayerController,
-      // aspectRatio: 4 / 3,
+      aspectRatio: 4 / 3,
       autoInitialize: true,
       errorBuilder: (context, errorMessage) {
         return Center(

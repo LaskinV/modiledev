@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:lab/main.dart';
-
+import 'package:socket_io_client/socket_io_client.dart' as IO;
 
 class Lab08 extends StatefulWidget {
   @override
@@ -11,8 +11,8 @@ class Lab08 extends StatefulWidget {
 }
 
 class _Lab08State extends State<Lab08> {
-  final authLink = 'https://51.15.91.29/laskin/jwt/auth';
-  final protectedLink = 'https://51.15.91.29/laskin/jwt/protected';
+  final authLink = 'https://51.15.91.29:8111/laskin/jwt/auth';
+  final protectedLink = 'https://51.15.91.29:8111/laskin/jwt/protected';
   final HttpClient client = new HttpClient();
 
   String token = '';
@@ -26,7 +26,7 @@ class _Lab08State extends State<Lab08> {
 
   Widget _ImageWrapper() {
     if (responseImage == null) {
-      return LinearProgressIndicator();
+      return CircularProgressIndicator();
     }
 
     return Container(
@@ -40,8 +40,8 @@ class _Lab08State extends State<Lab08> {
   }
 
   void getToken() {
-    // MyApp.analytics.logEvent(
-    //     name: 'ButtonClick', parameters: {'ButtonName': 'GetTokenButton'});
+    MyApp.analytics.logEvent(
+        name: 'ButtonClick', parameters: {'ButtonName': 'GetTokenButton'});
     client.getUrl(Uri.parse(authLink)).then((HttpClientRequest request) {
       // Optionally set up headers...
       // Optionally write to the request object...
